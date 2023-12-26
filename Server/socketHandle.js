@@ -13,10 +13,12 @@ const handler = (socket) => {
 
     // Data : id and stream : passing stream to Connected Users.
     socket.on('offer', (data) => {
+        console.log("offer from frontend")
         socket.to(data.target).emit('offer', data);
     });
 
     socket.on('answer', (data) => {
+        console.log("answering...")
         socket.to(data.target).emit('answer', data);
     });
 
