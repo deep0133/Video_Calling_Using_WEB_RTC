@@ -10,7 +10,7 @@ import handler from "./socketHandle.js"
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
-const allowedOrigins = ['http://192.168.1.65:5173']; // Add your React app's URL
+const allowedOrigins = ['http://192.168.1.65:5173', "http://localhost:5173", "https://140e-210-89-39-19.ngrok-free.app"]; // Add your React app's URL
 
 app.use(cors({
     origin: function (origin, callback) {
