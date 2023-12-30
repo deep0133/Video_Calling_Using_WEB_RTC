@@ -3,7 +3,8 @@ import crypto from "crypto"
 const map = {}
 
 const generateRoomId = (name, password) => {
-    const roomId = crypto.randomBytes(8).toString('hex');
+    // const roomId =  crypto.randomBytes(8).toString('hex');
+    const roomId = "123456"
     map[roomId] = { name, password };
     return roomId;
 }
