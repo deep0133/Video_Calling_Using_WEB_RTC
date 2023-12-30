@@ -31,6 +31,7 @@ const handler = (socket) => {
     socket.on('create-room', (data) => {
         const roomId = generateRoomId(data.name, data.password)
         socket.join(roomId);
+        console.log("Romm craeting and joining")
         socket.emit('room-created', roomId);
     });
 
