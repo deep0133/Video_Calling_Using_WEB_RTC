@@ -44,9 +44,9 @@ const handler = (socket) => {
             // Check if the provided password matches the stored password for the room
             if (map[roomId].password === password) {
                 // Join the room
-                console.log("id and password varified :")
                 socket.join(roomId);
-                socket.emit('room-joined', { message: "Room Joined", name: data.name });
+                console.log("Room Joined...")
+                socket.to(roomId).emit('room-joined', { message: "Room Joined", name: data.name });
             } else {
                 console.log("Password not varified")
                 // Password doesn't match
